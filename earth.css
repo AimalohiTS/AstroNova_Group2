@@ -1,0 +1,28 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    background-color: #F6F8FF;
+    gap: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 24px 16px;         
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    padding: 48px 40px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  .container {
+    padding: 130px 355px;
+  }
+}
