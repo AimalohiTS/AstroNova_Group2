@@ -1,4 +1,4 @@
-*, *::before, *::after {
+/* *, *::before, *::after {
     box-sizing: border-box;
     background-color: #F6F8FF;
     gap: 10px;
@@ -11,18 +11,357 @@
   max-width: 1440px;
   margin-inline: auto;
   padding: 24px 16px;         
-}
+} */
 
 /* Tablet */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .container {
     padding: 48px 40px;
   }
-}
+} */
 
 /* Desktop */
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .container {
     padding: 130px 355px;
   }
+}
+
+.h1{
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000000;
+  padding: 24px 60px;
+}
+
+.search-form input[type="search"]{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  opacity: 1;
+  border-radius: 16px;
+  padding: 4px 6px 4px 12px;
+  box-shadow: 0px 16px 30px -10px #4660BB33;
+  outline: none;
+}
+
+.planet-card{
+  grid-template-columns: 1fr;
+  width: 730px;
+  height: 420px;
+  gap: 32px;
+  opacity: 1;
+  border-radius: 15px;
+  padding: 24px;
+  background-color: #FFFFFF;
+}
+
+.earth-image{
+  width: 117px;
+  height: 117px;
+  opacity: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.h2{
+  width: 108px;
+  height: 31px;
+  opacity: 1;
+  font-family: Space Mono;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 26px;
+  line-height: 120%;
+  letter-spacing: 0px;
+  background-color: #FFFFFF;
+}
+
+.planet-type{
+  width: 108px;
+  height: 24px;
+  opacity: 1;
+  font-family: Space Mono;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color:#0079FF;
+  background-color: #FFFFFF;
+}
+
+.p{
+  width: 480;
+  height: 46;
+  opacity: 0.75;
+  font-family: Space Mono;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #4B6A9B;
+  background-color: #FFFFFF; 
+}
+
+.stats{
+  width: 480px;
+  height: 85px;
+  justify-content: space-between;
+  padding: 8px 16px 8px 16px;
+  opacity: 1;
+  border-radius: 10px;
+  background:#F6F8FF;
+}
+
+.details{
+  list-style: none; 
+  width: 480px;
+  height: 64px;
+  gap: 16px;
+  opacity: 1;
+  background-color: #FFFFFF;
+}
+
+.details li{
+  width: 480px;
+  height: 64px;
+  gap: 16px;
+  opacity: 1;
+  background-color: #FFFFFF;
+}
+
+.visually-hidden{
+  width: 480px;
+  height: 64px;
+  gap: 16px;
+  opacity: 1;
+  background-color: #FFFFFF;
+} */
+
+
+/* ---------- Theme variables ---------- */
+:root {
+  --bg: #F6F8FF;
+  --card: #FFFFFF;
+  --text: #2B3442;
+  --muted: #4B6A9B;
+  --blue: #0079FF;
+  --shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
+}
+
+[data-theme="dark"] {
+  --bg: #141D2F;
+  --card: #1E2A47;
+  --text: #FFFFFF;
+  --muted: #FFFFFF;
+  --shadow: none;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Space Mono", monospace;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Page container ---------- */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 24px 16px;
+}
+
+@media (min-width: 768px) {
+  .container { padding: 48px 40px; }
+}
+
+@media (min-width: 1440px) {
+  .container { padding: 130px 355px; }   /* content area = 730px */
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-toggle {
+  background: none;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* ---------- Search ---------- */
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 4px 6px 4px 12px;
+  box-shadow: var(--shadow);
+}
+
+.search-form:focus-within {
+  outline: 2px solid var(--blue);
+}
+
+.search-form input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  padding: 12px 0;
+}
+
+.search-form button {
+  background: var(--blue);
+  color: #FFFFFF;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ---------- Planet card ---------- */
+.planet-card {
+  display: grid;
+  grid-template-columns: 1fr;       /* mobile: stacked */
+  gap: 16px;
+  background: var(--card);
+  border-radius: 15px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.earth-image {
+  width: 117px;
+  height: 117px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .planet-card {
+    grid-template-columns: 117px 1fr;   /* image left, text right */
+    column-gap: 32px;
+    row-gap: 8px;
+  }
+  .earth-image {
+    grid-column: 1;
+    grid-row: 1 / span 5;               /* image spans all 5 text rows */
+  }
+  .planet-card > :not(.earth-image) {
+    grid-column: 2;                     /* everything else in the right column */
+  }
+}
+
+.planet-card h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.planet-type {
+  margin: 0;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--blue);
+}
+
+.p {
+  margin: 0;
+  max-width: 480px;
+  font-size: 15px;
+  line-height: 150%;
+  color: var(--muted);
+  opacity: 0.75;
+}
+
+/* ---------- Stats strip ---------- */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  max-width: 480px;
+  margin: 8px 0 0;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: var(--bg);
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stats dt {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.stats dd {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ---------- Icon details ---------- */
+.details {
+  list-style: none;          /* removes the bullets */
+  margin: 8px 0 0;
+  padding: 0;
+  max-width: 480px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.details li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.details img {
+  width: 24px;
+  height: 24px;
 }

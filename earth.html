@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="earth.css">
+    <script src="theme.js" defer></script>
     <title>AstroNova_Group2</title>
 </head>
 <body>
     <div class="container">
     <header class="site-header">
   <nav class="navbar" aria-label="Main">
-    <a href="/" class="logo"><img src="Images/Logo.png" alt="Planet home"></a>
-    <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
-      <img src="Images/Path.png" alt="">
-    </button>
-  </nav>
+  <a href="/" class="logo"><img src="Images/Logo.png" alt="Planet home"></a>
+  <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
+    <img src="Images/Path.png" alt="">
+  </button>
+</nav>
 
-  <search>
-    <form action="#" class="search-form">
-      <label for="search" class="visually-hidden">Search planet name</label>
-      <img src="Images/SearchIcon.png" alt="">
-      <input type="search" id="search" name="q" placeholder="Search planet name">
-      <button type="submit">Search</button>
-    </form>
-  </search>
+<search>
+  <form action="#" class="search-form">
+    <label for="search" class="visually-hidden">Search planet name</label>
+    <img src="Images/SearchIcon.png" alt="">
+    <input type="search" id="search" name="q" placeholder="Search planet name">
+    <button type="submit">Search</button>
+  </form>
+</search>
 </header>
 
 <main>
   <article class="planet-card">
-    <img src="Images/Earth.png" alt="Earth">
-    <h2>Earth</h2>
+    <img src="Images/Earth.png" alt="Earth" class="earth-image">
+    <h2 class="h2">Earth</h2>
     <p class="planet-type">Terrestrial</p>
-    <p>The only known planet to support life, with liquid water on its surface.</p>
+    <p class="p">The only known planet to support life, with liquid water on its surface.</p>
 
     <dl class="stats">
       <div><dt>Gravity</dt><dd>9.8</dd></div>
