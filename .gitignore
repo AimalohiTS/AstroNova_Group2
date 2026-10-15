@@ -1,0 +1,6 @@
+.DS_Store 
+Thumb.db
+.vscode/
+.env
+.env*
+!.env.example
