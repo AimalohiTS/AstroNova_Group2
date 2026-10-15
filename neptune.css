@@ -1,0 +1,201 @@
+/* General page styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.planet-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: circle;
+}
+
+/* Main planet card */
+.planet-card {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.04);
+}
+
+/* Planet icon container */
+.planet-icon {
+    flex-shrink: 0;
+    padding-top: 20px;
+}
+
+/* Neptune planet */
+.neptune {
+    width: 138px;
+    height: 138px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 40% 35%,
+        #e4f8ff 0%,
+        #c8e5ee 45%,
+        #a8c7d1 75%,
+        #75949e 100%
+    );
+    border: 8px solid #000000;
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Content section */
+.planet-content {
+    flex: 1;
+    min-width: 0;
+}
+
+h1 {
+    font-size: 44px;
+    margin-bottom: 36px;
+    color: #000000;
+}
+
+.planet-type {
+    display: inline-block;
+    font-size: 26px;
+    color: #56316c;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+
+.description {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #222222;
+    margin-bottom: 30px;
+}
+
+/* Statistics box */
+.planet-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: #f8f8f8;
+    padding: 30px 38px;
+    border-radius: 24px;
+    margin-bottom: 30px;
+}
+
+.stat h3 {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #444444;
+    margin-bottom: 18px;
+}
+
+.stat p {
+    font-family: monospace;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Bottom details */
+.planet-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 40px;
+    padding: 0 5px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #111111;
+}
+
+.icon {
+    font-size: 32px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .planet-card {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .planet-icon {
+        padding-top: 0;
+    }
+
+    .uranus {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .planet-type {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .planet-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        padding: 20px 15px;
+    }
+
+    .stat h3 {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .stat p {
+        font-size: 17px;
+    }
+
+    .planet-details {
+        gap: 25px 15px;
+    }
+
+    .detail {
+        font-size: 18px;
+        gap: 10px;
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+}
