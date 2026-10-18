@@ -137,7 +137,11 @@ caption {
     padding: 0 0 16px 0;
     margin: 0;
 }
-
+[data-theme="dark"] th,
+.dark th {
+    background-color: #141D2F; 
+color: #D1E3FF;
+}
 
 
 
