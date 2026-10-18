@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Planet Explorer</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <script src="js/theme.js" defer></script>
+    <script type="module" src="js/main.js"></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="logo" href="index.html">Planet Explorer</a>
+
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+        >
+          ☾
+        </button>
+      </nav>
+    </header>
+
+    <main class="planet-page">
+      <section class="planet-detail" aria-label="Explore planets">
+        <div class="search-container">
+          <label for="planet-search">Explore the planets</label>
+
+          <div class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+
+            <input
+              type="search"
+              id="planet-search"
+              placeholder="Search for a planet..."
+              autocomplete="off"
+              aria-label="Search for a planet"
+            />
+          </div>
+        </div>
+
+        <p id="loading-message" role="status">Loading Earth...</p>
+        <p id="error-message" role="alert" hidden></p>
+
+        <article id="planet-card" class="planet-card">
+          <div id="planet-grid"></div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

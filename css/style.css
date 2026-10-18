@@ -1,0 +1,547 @@
+
+/* ========================================
+   1. CSS VARIABLES AND RESET
+======================================== */
+
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #30394a;
+  background: #f5f7ff;
+
+  --page-bg: #f5f7ff;
+  --card-bg: #ffffff;
+  --text-primary: #30394a;
+  --text-secondary: #6682b4;
+  --accent: #087bff;
+  --border-color: #e3eaf8;
+  --stat-bg: #f5f7ff;
+  --shadow: 0 12px 35px rgba(48, 65, 110, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* ========================================
+   2. DARK MODE
+   Compatible with theme.js:
+   document.documentElement data-theme
+======================================== */
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --page-bg: #101522;
+  --card-bg: #1a2233;
+  --text-primary: #f1f5ff;
+  --text-secondary: #a2b5d9;
+  --accent: #55a2ff;
+  --border-color: #2b3850;
+  --stat-bg: #222d42;
+  --shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ========================================
+   3. HEADER AND NAVIGATION
+======================================== */
+
+.site-header {
+  width: 100%;
+  padding: 20px 6%;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--accent);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+
+  font-size: 1.25rem;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(-10deg);
+}
+
+
+/* ========================================
+   4. MAIN PAGE LAYOUT
+======================================== */
+
+.planet-page {
+  width: 100%;
+  min-height: calc(100vh - 90px);
+  padding: 30px 20px 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.planet-detail {
+  width: 100%;
+  max-width: 900px;
+}
+
+
+/* ========================================
+   5. PLANET CARD
+======================================== */
+
+.planet-card {
+  width: 100%;
+  padding: 32px;
+
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+
+  box-shadow: var(--shadow);
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* Container populated by planets.js */
+
+#planet-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  min-width: 0;
+}
+
+
+/* ========================================
+   6. PLANET IMAGE
+======================================== */
+
+.planet-card__image {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px;
+
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+
+/* ========================================
+   7. PLANET NAME AND DESCRIPTION
+======================================== */
+
+.planet-card__name {
+  margin-bottom: 4px;
+
+  color: var(--text-primary);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.planet-card__type {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.planet-card__description {
+  margin-bottom: 22px;
+
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   8. PLANET DETAILS BUTTON
+======================================== */
+
+.planet-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+  padding: 10px 20px;
+
+  color: #ffffff;
+  background: var(--accent);
+  border: none;
+  border-radius: 10px;
+
+  font-weight: 700;
+  cursor: pointer;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.planet-card__button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.planet-card__button:focus-visible,
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+
+/* ========================================
+   9. LOADING AND ERROR MESSAGES
+======================================== */
+
+#loading-message,
+#error-message {
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+#loading-message {
+  color: var(--text-secondary);
+  background: var(--stat-bg);
+}
+
+#error-message {
+  color: #c62828;
+  background: #ffebee;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+
+/* ========================================
+   10. RESPONSIVE LAYOUT
+======================================== */
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 16px 5%;
+  }
+
+  .logo {
+    font-size: 1.15rem;
+  }
+
+  .planet-page {
+    padding: 18px 14px 40px;
+  }
+
+  .planet-card {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .planet-card__image {
+    width: 145px;
+    height: 145px;
+  }
+
+  .planet-card__name {
+    font-size: 1.8rem;
+  }
+
+  .planet-card__description {
+    font-size: 0.9rem;
+  }
+
+  .planet-card__button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* Earth card layout */
+
+.planet-card__header {
+  margin-bottom: 28px;
+}
+
+.planet-card__section-title {
+  margin: 26px 0 14px;
+  color: var(--text-primary);
+  font-size: 1.15rem;
+  font-weight: 750;
+}
+
+.planet-card__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.planet-card__stat {
+  min-width: 0;
+  padding: 18px 14px;
+  background: var(--stat-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+}
+
+.planet-card__stat-label,
+.planet-card__fact-label {
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+.planet-card__stat-value,
+.planet-card__fact-value {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.planet-card__facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+
+.planet-card__fact {
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.planet-card__fact:nth-child(odd) {
+  padding-left: 0;
+}
+
+.planet-card__fact:nth-child(even) {
+  padding-right: 0;
+}
+
+@media (max-width: 600px) {
+  .planet-card__stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .planet-card__stat {
+    padding: 14px;
+  }
+
+  .planet-card__facts {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .planet-card__stat-value,
+  .planet-card__fact-value {
+    font-size: 0.9rem;
+  }
+}
+
+/* Search section */
+
+.search-container {
+  margin-bottom: 24px;
+}
+
+.search-container label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+
+  transition: border-color 0.2s ease;
+}
+
+.search-box:focus-within {
+  border-color: var(--accent);
+}
+
+.search-icon {
+  color: var(--text-secondary);
+  font-size: 1.6rem;
+}
+
+#planet-search {
+  width: 100%;
+  min-width: 0;
+  height: 52px;
+
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+#planet-search::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.8;
+}
+
+/* Planet facts */
+
+.planet-card__section-title {
+  margin: 28px 0 16px;
+  font-size: 1.2rem;
+  font-weight: 750;
+}
+
+.planet-card__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.planet-card__stat {
+  padding: 18px 14px;
+  background: var(--stat-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+}
+
+.planet-card__facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 24px;
+}
+
+.planet-card__fact {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.planet-card__stat-label,
+.planet-card__fact-label {
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+.planet-card__stat-value,
+.planet-card__fact-value {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .planet-card {
+    padding: 20px 16px;
+  }
+
+  .planet-card__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .planet-card__facts {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 14px;
+  }
+
+  .planet-card__stat-value,
+  .planet-card__fact-value {
+    font-size: 0.88rem;
+  }
+}
+
+
+
