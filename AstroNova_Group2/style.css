@@ -1,6 +1,4 @@
-
 /* ASTRONOVA - GLOBAL STYLES */
-
 :root {
   color-scheme: light;
   --page-bg: #F6F8FF;
@@ -265,16 +263,17 @@ button {
 .planet-type {
   display: inline-block;
   margin: 0;
-  padding: 3px 10px;
-  border-radius: 20px;
-  color: #164BAF;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted-color);
   font-size: 11px;
   font-weight: 600;
 }
 
 [data-theme="dark"] .planet-type {
-  background: #273D5B;
-  color: #BFD3FF;
+  background: transparent;
+  color: var(--muted-color);
 }
 
 .planet-description {
@@ -567,36 +566,247 @@ tbody td.table-planet-name {
   text-decoration: underline;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* RESPONSIVE LAYOUTS */
+
+/* Tablet: preserve the horizontal planet card, with more compact spacing. */
+@media (max-width: 900px) {
+  .site-header,
+  .explorer-section,
+  .facts-section,
+  .site-footer {
+    width: min(calc(100% - 40px), 730px);
+  }
+
   .site-header {
     padding-top: 20px;
   }
 
-  .facts-section h2 {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 600px) {
   .planet-card {
-    gap: 14px;
-    padding: 20px;
+    gap: 20px;
+    padding: 22px;
   }
 
   .planet-image {
-    flex: 0 0 90px;
-    width: 90px;
-    height: 90px;
+    flex-basis: 100px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .planet-name {
+    font-size: 22px;
+  }
+
+  .planet-description {
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+
+  .planet-main-facts {
+    gap: 10px;
+    margin: 20px 0 24px;
+  }
+
+  .planet-main-fact .fact-value {
+    font-size: 15px;
+  }
+
+  .planet-icon-facts {
+    gap: 14px 14px;
+  }
+
+  .facts-section h2 {
+    font-size: 21px;
+  }
+}
+
+/* Small tablets and large phones: keep the image beside the content, but
+   let the facts use the available width without forcing overflow. */
+@media (max-width: 600px) {
+  .site-header,
+  .explorer-section,
+  .facts-section,
+  .site-footer {
+    width: calc(100% - 32px);
+  }
+
+  .navbar {
+    min-height: 44px;
+    margin-bottom: 16px;
+  }
+
+  .logo img {
+    width: 88px;
+    max-height: 38px;
+  }
+
+  .search-area {
+    margin-bottom: 18px;
+  }
+
+  .search-form {
+    gap: 8px;
+    min-height: 44px;
+    padding: 6px 7px 6px 10px;
+  }
+
+  .search-form button {
+    padding-inline: 12px;
+  }
+
+  .planet-grid {
+    gap: 16px;
+  }
+
+  .planet-card {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .planet-image {
+    flex: 0 0 76px;
+    width: 76px;
+    height: 76px;
+  }
+
+  .planet-content {
+    width: auto;
+    min-width: 0;
+  }
+
+  .planet-heading {
+    margin-bottom: 8px;
+  }
+
+  .planet-name {
+    font-size: 18px;
+    overflow-wrap: anywhere;
+  }
+
+  .planet-type {
+    font-size: 10px;
+  }
+
+  .planet-description {
+    margin-bottom: 14px;
+    font-size: 11px;
+    line-height: 1.55;
+  }
+
+  .planet-main-facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin: 16px 0 20px;
+  }
+
+  .planet-main-fact .fact-label {
+    margin-bottom: 5px;
+    font-size: 10px;
+  }
+
+  .planet-main-fact .fact-value {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .planet-icon-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 8px;
+    max-width: 100%;
+  }
+
+  .planet-icon-fact {
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .planet-icon-fact .planet-fact-icon {
+    flex: 0 0 17px;
+    width: 17px;
+    height: 17px;
+  }
+
+  .planet-icon-fact .planet-fact-value {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .facts-section {
+    margin-bottom: 34px;
+  }
+
+  .facts-section h2 {
+    font-size: 19px;
+  }
+
+  .facts-intro {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 520px;
+    font-size: 11px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 9px 7px;
+  }
+
+  .footer-content {
+    gap: 14px;
+  }
+
+  .footer-copyright {
+    max-width: 190px;
+  }
+}
+
+/* Narrow phones: stack the image above the details only when the screen is
+   too narrow to keep the horizontal card readable. */
+@media (max-width: 390px) {
+  .site-header,
+  .explorer-section,
+  .facts-section,
+  .site-footer {
+    width: calc(100% - 24px);
+  }
+
+  .planet-card {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .planet-image {
+    flex: 0 0 76px;
+    width: 76px;
+    height: 76px;
+    align-self: flex-start;
   }
 
   .planet-content {
     width: 100%;
   }
 
+  .planet-name {
+    font-size: 19px;
+  }
+
+  .planet-description {
+    font-size: 12px;
+  }
+
   .planet-main-facts {
-    gap: 8px;
-    margin: 18px 0 24px;
+    gap: 10px;
   }
 
   .planet-main-fact .fact-label {
@@ -607,148 +817,15 @@ tbody td.table-planet-name {
     font-size: 13px;
   }
 
-  .planet-icon-facts {
-    gap: 12px 10px;
-  }
-
-  .planet-icon-fact {
-    gap: 7px;
-  }
-
-  .planet-icon-fact .planet-fact-icon {
-    flex-basis: 17px;
-    width: 17px;
-    height: 17px;
-  }
-
   .planet-icon-fact .planet-fact-value {
     font-size: 10px;
-  }
-
-  .planet-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 480px) {
-  .site-header,
-  .explorer-section,
-  .facts-section,
-  .site-footer {
-    width: calc(100% - 28px);
-  }
-
-  .navbar {
-    min-height: 44px;
-    margin-bottom: 14px;
-  }
-
-  .logo img {
-    width: 88px;
-  }
-
-  .search-area {
-    margin-bottom: 18px;
-  }
-
-  .search-form {
-    gap: 7px;
-    min-height: 44px;
-    padding: 6px 7px 6px 10px;
-  }
-
-  .search-form button {
-    padding-inline: 10px;
-  }
-
-  .planet-card {
-    padding: 16px;
-  }
-
-  .planet-name {
-    font-size: 17px;
-  }
-
-  .planet-description {
-    font-size: 11px;
-  }
-
-  .planet-main-facts {
-    gap: 6px;
-  }
-
-  .planet-main-fact .fact-label {
-    font-size: 9px;
-  }
-
-  .planet-main-fact .fact-value {
-    font-size: 11px;
-  }
-
-  .planet-icon-facts {
-    gap: 12px 8px;
-  }
-
-  .planet-icon-fact .planet-fact-value {
-    font-size: 9px;
-  }
-
-  .planet-stats {
-    gap: 9px 6px;
-    padding: 9px;
-  }
-
-  .planet-fact-icon {
-    flex-basis: 15px;
-    width: 15px;
-    height: 15px;
-  }
-
-  .planet-fact dt {
-    font-size: 9px;
-  }
-
-  .planet-fact dd {
-    font-size: 10px;
-  }
-
-  .facts-section {
-    margin-bottom: 32px;
-  }
-
-  .facts-section h2 {
-    font-size: 18px;
-  }
-
-  .facts-intro {
-    font-size: 11px;
-  }
-
-  table {
-    font-size: 11px;
-  }
-
-  thead th,
-  tbody td {
-    padding: 9px 7px;
   }
 
   .footer-content {
     flex-direction: column;
-    gap: 14px;
   }
 
   .footer-copyright {
     max-width: 100%;
-  }
-}
-
-@media (max-width: 380px) {
-  .planet-card {
-    flex-direction: column;
-  }
-
-  .planet-image {
-    align-self: flex-start;
   }
 }

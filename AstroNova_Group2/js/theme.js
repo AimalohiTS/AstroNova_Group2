@@ -41,7 +41,6 @@ function getSavedTheme() {
     : "light";
 }
 
-// Apply the saved or preferred theme when the page loads.
 applyTheme(getSavedTheme());
 
 // Switch themes when the button is clicked.
