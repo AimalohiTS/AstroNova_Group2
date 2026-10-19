@@ -27,7 +27,7 @@ A structured comparative table citing NASA data, categorizing planets into Terre
 1. Emmanuella Aimalohi Ileogben - Team Lead (https://github.com/AimalohiTS)
 2. Joy Oluchi Ani - Asst. Team Lead (https://github.com/Joie-luchy)
 3. Anthonia Chidinma Aja-Chukwu - (https://github.com/DEV-TONIA001)
-4. Ifunanya Chidinma Ugwoke - (https://github.com/ifunanyadimma/)
+4. Ifunanya Chidimma Ugwoke - (https://github.com/ifunanyadimma/)
 5. Dasola Gift Olanipekun - (https://github.com/Dasola-creator)
 6. Chimaobi Akachukwu - (https://github.com/Chimaobi-Akachukwu)   
 7. Stephen Ezeani - (https://github.com/StevieGerald)
