@@ -51,7 +51,7 @@ A structured comparative table citing NASA data, categorizing planets into Terre
 - *Table Components Styles:* CSS styles for responsive data tables, featuring horizontal scrolling, custom cell padding, zebra striping, category row styling, and full dark mode support.
 - *Footer Components Styles:* CSS styles for the site footer, featuring a flexible two-column layout, top border separator, about section, and copyright links with muted typography.
 
-### What the JavaScript Is All About (theme.js & search.js)
+### What the JavaScript Is All About
 Splitting JavaScript into modular files keeps the codebase maintainable for collaborative group work:
 - *theme.js (Theme Manager):* Listens for clicks on the theme toggle button, switches the HTML document's data-theme attribute between light and dark, and saves the user's preference to browser localStorage so it persists across page reloads. (Done by Ifunanya)
 - *search.js (Search & Filter Logic):* Captures user input from the search form in real-time (input and submit events), evaluates planet names against the search query, and toggles the .hidden CSS class on or off for respective cards without requiring a full page refresh. (Done by Emmanuella)
@@ -65,7 +65,7 @@ Splitting JavaScript into modular files keeps the codebase maintainable for coll
 
 ## How to Run This Web Page Locally
 To run and test this project locally on your machine, follow these steps:
-**1. Organize Project Files:** 
+**i. Organize Project Files:** 
 Ensure all your files are saved inside a single project folder with the following directory structure:
 my-astro-project/
 ├── html/ (contains index.html)
@@ -81,12 +81,12 @@ my-astro-project/
 ├── package.lock.json
 └── icons/ (containing vector and toggle icons)
 
-2. **Open with a Local Development Server:**
+ii. **Open with a Local Development Server:**
 - Because modern browsers restrict certain asset loads or local script behaviors when opening files directly via the file:// protocol, it is best to run it through a local server.
 - If using Visual Studio Code, install the popular Live Server extension.
 - Right-click on index.html inside VS Code and select "Open with Live Server".
 
-3. **View in Browser:**
+iii. **View in Browser:**
 The project will automatically launch in your default web browser (usually at [http://127.0.0.1:5500](http://127.0.0.1:5500)), where you can interact with the theme toggle, search bar, and fully responsive layout.
 
 ## The Live Deployment Link
