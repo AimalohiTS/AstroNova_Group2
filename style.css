@@ -142,6 +142,7 @@
 
 
 
+
 /* ---------- Theme variables ---------- */
 :root {
   --bg: #F6F8FF;
@@ -375,14 +376,14 @@ img {
 }
 
 /* ---------- Table ---------- */
-table {
+ table {
   width: 100%;
   border-collapse: collapse; /* Prevents double borders */
-  margin-top: 20px;
-  background-color: #F2F7FF;
+  margin-top: 20px; 
+  background-color: #F2F7FF; 
   justify-content: center;            /* centers the image and text */
-  font-family: "Inter", sans-serif;
-}
+  font-family: "Inter", sans-serif; 
+} 
 
 [data-theme="dark"] {
   table {
@@ -414,9 +415,148 @@ th, td {
 th {
   background-color: #164BAF;
   color: #F2F7FF;
-  font-weight: bold;
+  font-weight: bold; 
 }
-         
+ 
+/* General page styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 40px;
+    color: #111111;
+    background-color: #F7F8FF;
+}
+
+/* Main heading */
+h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+/* Table caption */
+caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 12px;
+    color: #163454;
+}
+
+/* Table structure */
+table {
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Column widths */
+th:first-child {
+    width: auto;
+}
+
+/* Header row */
+thead th {
+    background-color: #164BAF;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 15px 10px;
+    text-align: center;
+    border: 2px solid #FFFFFF;
+}
+
+/* All table cells */
+td,
+tbody th {
+    padding: 15px 10px;
+    border: 2px solid #FFFFFF;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Keep the rounded corners visible */
+table {
+
+
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+}
+
+
+/* Planet names and numerical data */
+td {
+    background-color: #F0F6FF;
+    color: #111111;
+    font-weight: 400;
+}
+
+
+/* Planet category cells */
+.category {
+    background-color: #D1E3FF;
+    color: #111111;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* Keep the category labels from becoming dark blue */
+tbody th.category {
+    background-color: #D2E3FC;
+    color: #111111;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 700px) {
+    body {
+        padding: 16px;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    #planetary-data {
+        overflow-x: auto;
+    }
+}
+
+/* Round the top-left corner */
+thead th:first-child {
+    border-top-left-radius: 16px;
+}
+
+/* Round the top-right corner */
+thead th:last-child {
+    border-top-right-radius: 16px;
+}
+
+
+
+caption {
+    caption-side: top;
+    display: table-caption;
+    position: static;
+    color: #0F2A44;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    text-align: left;
+    padding: 0 0 16px 0;
+    margin: 0;
+}
+
 /* Highlight break times */
 .break-row {
   background-color: #90A4D4;
@@ -437,65 +577,63 @@ th {
 }
 
 /* ---------- Footer ---------- */
-* {
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Inter' , sans-serif;
-}
-
+/* Footer Section */
 .site-footer {
+    width: 100%;
+    padding: 30px 5%;
+    color: #4B6A9B;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+/* Places About and Copyright side-by-side */
+.site-footer .container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 30px 0;
-    color: #D1E3FF;
-    font-size: 16px;
-
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.footer-about,
-.footer-copyright {
-    width: 45%;
-    font-family: 'Inter', sans-serif;
+/* Left side: About and team members */
+.footer-about {
+    flex: 1;
+    min-width: 0;
 }
 
-.footer-heading { 
+/* About heading */
+.footer-heading {
     display: inline-block;
     font-size: 20px;
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: -0.02em;
-    vertical-align: middle;
     margin-bottom: 12px;
 }
 
+/* Team member list */
 .footer-text {
+    padding: 0;
+    margin: 0;
+    list-style: none;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.8;
     letter-spacing: -0.02em;
-    vertical-align: middle; 
-    font-family: 'Inter', sans-serif;
 }
 
-.footer-copyright{
-   font-size: 16px;
+/* Right side: Copyright and credits */
+.footer-copyright {
+    flex: 1;
+    min-width: 0;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: -0.02em;
-    vertical-align: middle; 
-}
-
-.site-footer p {
-    margin: 8px 0;
-    line-height: 1.5;
-    font-weight: 600;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-    vertical-align: middle; 
-    font-family: 'Inter', sans-serif;
+    text-align: right;
 }
 
 .site-footer p {
@@ -506,8 +644,23 @@ body {
 .site-footer a {
     color: inherit;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .site-footer a:hover {
     text-decoration: underline;
+}
+
+/* Responsive layout for mobile screens */
+@media (max-width: 600px) {
+    .site-footer .container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer-about,
+    .footer-copyright {
+        width: 100%;
+        text-align: left;
+    }
 }
