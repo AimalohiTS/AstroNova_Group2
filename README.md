@@ -90,6 +90,6 @@ my-astro-project/
 The project will automatically launch in your default web browser (usually at [http://127.0.0.1:5500](http://127.0.0.1:5500)), where you can interact with the theme toggle, search bar, and fully responsive layout.
 
 ## The Live Deployment Link
-- Yet to be deployed
+- Vercel App - (https://astronovagroup2-roan.vercel.app/)
 
 [Project Repository](https://github.com/AimalohiTS/AstroNova_Group2)
