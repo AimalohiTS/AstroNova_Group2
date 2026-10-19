@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the planets of our solar system with AstroNova.">
+  <title>AstroNova_Group2</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="js/theme.js" defer></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="AstroNova home">
+        <img src="images/logo_black.png" alt="AstroNova">
+      </a>
+
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
+        <img src="icons/Path.png" alt="">
+      </button>
+    </nav>
+
+    <search class="search-area">
+      <form class="search-form" role="search">
+        <label for="search" class="visually-hidden">Search planet name</label>
+        <img src="icons/SearchIcon.png" alt="">
+        <input
+          type="search"
+          id="search"
+          name="q"
+          placeholder="Search planet name"
+        >
+        <button type="submit">Search</button>
+      </form>
+    </search>
+  </header>
+
+  <main>
+    <section class="explorer-section" aria-labelledby="explorer-title">
+      <h1 id="explorer-title" class="visually-hidden">Explore the planets</h1>
+
+      <p id="loading-message" class="status-message" role="status">
+        Loading planets...
+      </p>
+
+      <p id="error-message" class="status-message error-message" role="alert" hidden></p>
+
+      <div id="planet-grid" class="planet-grid"></div>
+    </section>
+
+    
+<section class="facts-section" aria-labelledby="facts-title">
+  <h2 id="facts-title">Planetary Facts at a Glance</h2>
+  <p class="facts-intro">
+    Below is a comparative table of major planets in our solar system. 
+    The data highlights key physical properties used by astronomers and researchers worldwide.
+  </p>
+
+  <div class="table-container">
+    <table>
+      <caption class="visually-hidden">
+        Planet names, masses, and diameters grouped by planet type
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Planet Group</th>
+          <th scope="col">Name</th>
+          <th scope="col">Mass (10²⁴ kg)</th>
+          <th scope="col">Diameter (km)</th>
+        </tr>
+      </thead>
+      <tbody id="planet-table-body"></tbody>
+    </table>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <section class="footer-about" aria-labelledby="about-title">
+        <h2 id="about-title">About AstroNova</h2>
+        <p>
+          AstroNova is a collaborative project exploring the planets of our
+          solar system through an interactive web experience.
+        </p>
+        <p class="team-members">
+          Team members: Emmanuella, Joy, Ifunanya, Chimaobi, Anthonia, Yusuf,
+          Dasola, Oladipo, Stephen, Daniel and Esther.
+        </p>
+      </section>
+
+      <div class="footer-copyright">
+        <p>&copy; 2026 AstroNova Group 2. All rights reserved.</p>
+        <a
+          href="https://github.com/AimalohiTS/AstroNova_Group2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View project on GitHub
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
