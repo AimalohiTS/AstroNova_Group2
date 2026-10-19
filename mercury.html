@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercury Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="js/theme.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/api.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/planets.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="container">
+    <header class="site-header">
+  <nav class="navbar" aria-label="Main">
+  <a href="/" class="logo"><img src="images/logo_black.png" alt="Planet home"></a>
+  <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
+    <img src="icons/Dark Theme Toggle.png" alt="Dark Theme">
+  </button>
+</nav>
+
+<search>
+  <form action="/" class="search-form">
+    <label for="search" class="visually-hidden">Search planet name</label>
+    <img src="icons/Search Icon.png" alt="">
+    <input type="search" id="search" name="q" placeholder="Search planet name">
+    <button type="submit">Search</button>
+  </form>
+</search>
+</header>
+</div>
+
+    <!-- Main Section -->
+     <!-- Earth Planet - Constant Planet Card -->
+      <div class="container">
+   <article class="planet-card">
+    <img src="images/Earth.png" alt="Earth" class="planet-image">
+    <h2 class="h2">Earth</h2>
+    <p class="planet-type">Terrestrial</p>
+    <p class="p">The only known planet to support life, with liquid water on its surface.</p>
+
+    <dl class="stats">
+      <div><dt>Gravity</dt><dd>9.8</dd></div>
+      <div><dt>Mass</dt><dd>0.00315</dd></div>
+      <div><dt>Period</dt><dd>365</dd></div>
+    </dl>
+
+    <ul class="details">
+      <li><img src="Icons/Vector.png" alt=""><span class="visually-hidden">Temperature:</span> 288</li>
+      <li><img src="Icons/Half moon.png" alt=""><span class="visually-hidden">Moons:</span> 1</li>
+      <li><img src="Icons/Diameter.png" alt=""><span class="visually-hidden">Diameter:</span> 12756</li>
+      <li><img src="Icons/Sun.png" alt=""><span class="visually-hidden">Distance from Sun:</span> 149.6</li>
+    </ul>
+  </article>
+  </div>
+
+  <!-- Table Section-->
+   <section class="table">
+            <div class="planet">
+              <div class="container">
+     <h2>Planetary Facts At A Glance</h2>
+    <p>Below is a comparative table of major planets in our solar system. The data highlights key <br> physical properties used by astronomers 
+        and researchers worldwide.</p>
+    <p><b>
+        Data about the planets of our solar system. (Planetary Facts from NASA)</b></p>
+    <table> 
+      <thead class="#table">
+        <tr>
+          <th></th>
+          <th></th>
+          <th>Name</th>
+          <th>Mass (10.24kg)</th>
+          <th>Diameter (km)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="break-row" rowspan="4" colspan="2">Terrestial Planets</td>
+          <td>Mercury</td>
+          <td>0.330</td>
+          <td>4,878</td>
+        </tr>
+        <td>Venus</td>
+        <td>0.330</td>
+        <td>4,878</td>
+      </tr>
+    <tr>
+    <td>Earth</td>
+    <td>0.330</td>
+    <td>4,878</td>
+    </tr>
+        <tr>
+    <td>Mars</td>
+    <td>0.330</td>
+    <td>4,878</td>
+    </tr>
+  <tr>
+    <td class="break-row" rowspan="4">Jovian Planets</td>
+          <td class="break-row" rowspan="2">Gas Giants</td>
+    <td>Jupiter</td>
+    <td>0.330</td>
+    <td>4,878</td>
+    </tr>
+  <tr>
+    <td>Saturn</td>
+    <td>0.330</td>
+    <td>4,878</td>
+  </tr>
+  <tr>
+    <td class="break-row" rowspan="2">Ice Giants</td>
+    <td>Uranus</td>
+    <td>0.330</td>
+    <td>4,878</td>
+    </tr>
+  <tr>
+    <td>Neptune</td>
+    <td>0.330</td>
+    <td>4,878</td>
+    </tr>
+  <tr>
+    <td class="break-row" colspan="2">Dwarf Planet</td>
+    <td>Pluto</td>
+    <td>0.330</td>
+    <td>4,878</td>
+    </tr>
+</table>
+</div>
+</div>
+</section>
+  <hr>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="container">
+    <div class="footer-about">
+        <a href="#about" class="footer-heading">About</a>
+        <p class="footer-text">
+    <ul>
+       <a href="https://github.com/AimalohiTS"><li>Emmanuella (Group Lead)</li></a>
+       <a href="https://github.com/Joie-luchy"><li>Joy (Asst. Group Lead)</li></a>
+       <a href="https://github.com/DEV-TONIA001"><li>Anthonia</li></a>
+       <a href="https://github.com/ifunanyadimma/"><li>Ifunanya</li></a>
+       <a href="https://github.com/mizdad06"><li>Yusuf</li></a>
+       <a href="https://github.com/Dasola-creator"><li>Dasola</li></a>
+       <a href="https://github.com/Cyber-Metroid"><li>Oladipo</li></a>
+       <a href="https://github.com/Chimaobi-Akachukwu"><li>Chimaobi</li></a>
+       <a href="https://github.com/StevieGerald"><li>Stephen</li></a>
+       <a href="https://github.com/ubahdaniel2002-ai"><li>Daniel</li></a>
+       <a href="#"><li>Esther</li></a>
+        
+        </ul>
+
+    <div class="footer-copyright">
+            <p>© 2026 Design by
+                <a href="https://amakandukwu.com">Amaka N</a>
+            </p>
+
+            <p>Built by
+                <a href="https://github.com/AimalohiTS/AstroNova_Group2">
+                    Astronova
+                </a>.
+                All rights reserved.
+            </p>
+
+            <a href="https://tsacademyonline.com/">TSAcademy</a>
+        </div>
+  </footer>
+  </div>
+     </main>
+</body>
+</html>
