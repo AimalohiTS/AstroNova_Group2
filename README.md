@@ -1,7 +1,7 @@
 # Group Name: AstroNova_Group2
 
 # Project Name: CAPSTONE PROJECT
-Powered by: TS Academy. This is a Capstone Project Repo that presents our finished work.
+Powered by: TS Academy. This is a Capstone Project Repository that presents our Frontend Development finished work.
 
 ## About the Project
 The web page is a collaborative group capstone project dashboard called "AstroNova" (designed for a solar system explorer app). It showcases detailed profiles of major bodies in our solar system—including Earth, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune, and Pluto—complete with physical metrics, a comparative summary table, and a team directory in the footer. It supports both Light and Dark appearance modes and is built with responsive layout principles.
@@ -17,7 +17,7 @@ The web page is a collaborative group capstone project dashboard called "AstroNo
 - *Other Planet Cards (Mercury through Pluto):* Individual <article> elements detailing each planet's classification (Terrestrial, Gas Giant, Ice Giant, Dwarf Planet), descriptions, physical stats (Gravity, Mass, Period), and visual data icons (Temperature, Moons, Diameter, Distance from Sun). (Group work with Chimaobi, Emmanuella, & Oluwatofunmi)
 
 **Planetary Facts At A Glance (Table Section) (Group work with Daniel & Yusuf):**
-A structured comparative table citing NASA data, categorizing planets into Terrestrial Planets, Jovian Planets (Gas Giants and Ice Giants), and Dwarf Planets with columns for names, mass, and diameter. (Group work with Daniel & Yusuf)
+A structured comparative table citing NASA data, categorizing planets into Terrestrial Planets, Jovian Planets (Gas Giants and Ice Giants), and Dwarf Planets with columns for names, mass, and diameter. 
 
 **Footer Section: (Group work with Anthonia & Dasola)**
 - *About / Team Directory:* Lists the group members' first names and links directly to their respective GitHub profiles (e.g., Emmanuella as Team Lead, Joy as Asst. Team Lead, Anthonia, and others).
@@ -29,14 +29,11 @@ A structured comparative table citing NASA data, categorizing planets into Terre
 3. Anthonia Chidinma Aja-Chukwu - (https://github.com/DEV-TONIA001)
 4. Ifunanya Chidinma Ugwoke - (https://github.com/ifunanyadimma/)
 5. Dasola Gift Olanipekun - (https://github.com/Dasola-creator)
-6. Chimaobi Akachukwu - (https://github.com/Chimaobi-Akachukwu)   \
-
-
-
+6. Chimaobi Akachukwu - (https://github.com/Chimaobi-Akachukwu)   
 7. Stephen Ezeani - (https://github.com/StevieGerald)
 8. Daniel Chukwuka Ubah - (https://github.com/ubahdaniel2002-ai)
-10. Yusuf - (https://github.com/mizdad06)
-11. Oluwatofunmi Esther Ajayi - (https://github.com/oluwatofunmiajayi94-droid)
+9. Yusuf Abdullahi Sejiro - (https://github.com/mizdad06)
+10. Oluwatofunmi Esther Ajayi - (https://github.com/oluwatofunmiajayi94-droid)
 
 ## How the Web Page Works
 - *Visual Layout & Hierarchy:* The page organizes data using semantic HTML elements (<header>, <nav>, <search>, <article>, <dl>, <table>, <footer>) to ensure structural clarity and accessibility for screen readers.
@@ -47,6 +44,12 @@ A structured comparative table citing NASA data, categorizing planets into Terre
 - *Responsive Grid Systems:* Utilizes CSS Grid (repeat(auto-fit, minmax(280px, 1fr))) to ensure planet cards gracefully reflow and rearrange themselves across desktops, tablets, and mobile screens.
 - *Card & Micro-Interactions:* Implements hover transformations (transform: translateY(-5px)) and smooth transitions for a polished user experience.
 - *Utility & Accessibility Classes:* Includes structural helpers like .visually-hidden for screen-reader accessibility and .hidden to dynamically toggle element visibility during searches.
+- *Typography & Google Fonts Configuration:* This project utilizes custom typography imported from Google Fonts to establish a modern, readable, and sci-fi/tech-inspired aesthetic. Font-Families Used:
+  a. Inter (sans-serif) - Weights: Regular (400), Medium (500), Semi-Bold (600), Bold (700). Usage: Primary body text, UI elements, descriptions, and labels for optimal readability.
+  b. Space Mono (monospace) - Weights: Regular (400), Bold (700). Usage: Headings, technical stats, numerical data, and code-like key-value displays.
+- *Planet Section Styles:* CSS styles for the planet explorer interface, including responsive grid layouts, card components with circular images, and dark mode support for text, badges, and backgrounds.
+- *Table Components Styles:* CSS styles for responsive data tables, featuring horizontal scrolling, custom cell padding, zebra striping, category row styling, and full dark mode support.
+- *Footer Components Styles:* CSS styles for the site footer, featuring a flexible two-column layout, top border separator, about section, and copyright links with muted typography.
 
 ### What the JavaScript Is All About (theme.js & search.js)
 Splitting JavaScript into modular files keeps the codebase maintainable for collaborative group work:
@@ -62,7 +65,7 @@ Splitting JavaScript into modular files keeps the codebase maintainable for coll
 
 ## How to Run This Web Page Locally
 To run and test this project locally on your machine, follow these steps:
-*1. Organize Project Files:* 
+**1. Organize Project Files:** 
 Ensure all your files are saved inside a single project folder with the following directory structure:
 my-astro-project/
 ├── html/ (contains index.html)
@@ -78,12 +81,12 @@ my-astro-project/
 ├── package.lock.json
 └── icons/ (containing vector and toggle icons)
 
-3. *Open with a Local Development Server:*
+2. **Open with a Local Development Server:**
 - Because modern browsers restrict certain asset loads or local script behaviors when opening files directly via the file:// protocol, it is best to run it through a local server.
 - If using Visual Studio Code, install the popular Live Server extension.
 - Right-click on index.html inside VS Code and select "Open with Live Server".
 
-4. *View in Browser:*
+3. **View in Browser:**
 The project will automatically launch in your default web browser (usually at [http://127.0.0.1:5500](http://127.0.0.1:5500)), where you can interact with the theme toggle, search bar, and fully responsive layout.
 
 ## The Live Deployment Link
