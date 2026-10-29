@@ -1,3 +1,4 @@
+
 # Group Name: AstroNova_Group2
 
 # Project Name: CAPSTONE PROJECT
@@ -24,14 +25,14 @@ A structured comparative table citing NASA data, categorizing planets into Terre
 - *Copyright & Credits:* Displays the project copyright, a designer credit linking to amakandukwu.com, a link to the AstroNova group repository, and a link to TSAcademy (tsacademyonline.com).
 
 ## The Names of all The Group Members with their GitHub Profiles
-1. Emmanuella Aimalohi Ileogben - Team Lead (https://github.com/AimalohiTS)
+1. Emmanuella Aimalohi Ileogben - Team Lead (https://github.com/AimalohiTS & https://github.com/Emma-Aima)
 2. Joy Oluchi Ani - Asst. Team Lead (https://github.com/Joie-luchy)
-3. Anthonia Chidinma Aja-Chukwu - (https://github.com/DEV-TONIA001)
+3. Aja-Chukwu Anthonia Chidinma - (https://github.com/DEV-TONIA001)
 4. Ifunanya Chidimma Ugwoke - (https://github.com/ifunanyadimma/)
-5. Dasola Gift Olanipekun - (https://github.com/Dasola-creator)
+5. Olanipekun Dasola Gift - (https://github.com/Dasola-creator)
 6. Chimaobi Akachukwu - (https://github.com/Chimaobi-Akachukwu)   
 7. Stephen Ezeani - (https://github.com/StevieGerald)
-8. Daniel Chukwuka Ubah - (https://github.com/ubahdaniel2002-ai)
+8. Ubah Daniel Chukwuka - (https://github.com/ubahdaniel2002-ai)
 9. Yusuf Abdullahi Sejiro - (https://github.com/mizdad06)
 10. Oluwatofunmi Esther Ajayi - (https://github.com/oluwatofunmiajayi94-droid)
 
@@ -68,18 +69,18 @@ To run and test this project locally on your machine, follow these steps:
 **i. Organize Project Files:** 
 Ensure all your files are saved inside a single project folder with the following directory structure:
 my-astro-project/
-├── html/ (contains index.html)
-├── css/ (contains style.css)
-├── js/ (contains:
-                  ├── theme.js,
-                  ├── search.js
-                  ├── api.js
-                  ├── main.js
-                  ├── planets.js
-├── images/ (containing planet PNGs and logo)
-├── .gitignore
-├── package.lock.json
-└── icons/ (containing vector and toggle icons)
+- html/ (contains index.html)
+- css/ (contains style.css)
+- js/ (contains:
+   a. theme.js,
+   b. search.js
+   c. api.js
+   d. main.js
+   e. planets.js
+- images/ (containing planet PNGs and logo)
+- .gitignore
+- package.lock.json
+- icons/ (containing vector and toggle icons)
 
 ii. **Open with a Local Development Server:**
 - Because modern browsers restrict certain asset loads or local script behaviors when opening files directly via the file:// protocol, it is best to run it through a local server.
